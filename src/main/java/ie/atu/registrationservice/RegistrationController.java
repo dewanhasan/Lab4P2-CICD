@@ -11,10 +11,7 @@ public class RegistrationController {
 
     @PostMapping("/register")
     public String registerUser(@RequestBody UserDetails userDetails){
-        System.out.println("Welcome to Registration Service!");
-        System.out.println("name " + userDetails.getName());
-        System.out.println("email " + userDetails.getEmail());
-
-        return " User Registered! ";
+        String message = "Hello " + userDetails.getName() + ", Email" + userDetails.getEmail();
+        return message;
     }
 }
